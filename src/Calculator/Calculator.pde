@@ -76,6 +76,11 @@ void drawDisplay() {
   rect(width/2, 2*sf, width-2*sf, 2*sf);
   fill(127);
   textAlign(RIGHT, CENTER);
+  if(displayVal.length()> 12) {
+    textSize(32);
+  } else if(displayVal.length()>14) {
+    textSize(30);
+  }
   text(displayVal, width-1.5*sf, 2*sf);
 }
 
@@ -126,7 +131,9 @@ void keyPressed() {
     handleEvent('1',true); 
   } else if(keyCode == 50 || keyCode == 98) {
     handleEvent('2',true); 
-  } else if(keyCode == 45 || keyCode == 109) {
+  } else if(keyCode == 51 || keyCode == 99) {
+    handleEvent('3',true); 
+  }else if(keyCode == 45 || keyCode == 109) {
     handleEvent('-',false); 
   } else if(keyCode == 107) {
     handleEvent('+',false); 
