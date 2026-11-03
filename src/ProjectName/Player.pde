@@ -8,14 +8,15 @@ class Player {
 Player() {
   x = 50;
   y = 50;
-  p1 = loadImage("");
+  p1 = loadImage("player.png");
 }
 
 // Member Method
 void display() {
   // replace rect with an image
-  fill(200,7,88);
-  rect(x,y,50,50);
+  image(p1,x,y);
+  //fill(200,7,88);
+  //rect(x,y,50,50);
 }
 
 void jump() {}
